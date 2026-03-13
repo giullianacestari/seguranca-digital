@@ -65,12 +65,64 @@ body {
   padding: 2rem 1.5rem;
 }
 
-section {
+section,
+#ajuda-urgente {
   background: var(--card-bg);
   border-radius: 20px;
   padding: 2.5rem;
   margin-bottom: 2.5rem;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+#ajuda-urgente {
+  background-color: #fff5f5;
+  border: 3px dashed var(--danger-color);
+}
+
+/* Esconde o modal por padrão e cria o fundo escurecido */
+.modal-fundo {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fundo preto transparente */
+}
+
+/* Estiliza o conteúdo do modal */
+.modal-content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Centraliza na tela */
+  max-width: 90%;
+  width: 600px;
+  margin: 0 !important;
+  /* Remove margens do section original */
+}
+
+.btn-close {
+  display: block;
+  width: 100%;
+  /* Ocupa a largura toda no celular, facilitando o toque */
+  margin-top: 2rem;
+  padding: 15px;
+  background-color: #6c757d;
+  /* Cor cinza para diferenciar do botão de perigo */
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-close:hover {
+  background-color: #5a6268;
 }
 
 h2 {
@@ -145,10 +197,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-#ajuda-urgente {
-  background-color: #fff5f5;
-  border: 3px dashed var(--danger-color);
-}
+
 
 footer {
   text-align: center;
