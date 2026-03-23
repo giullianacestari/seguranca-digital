@@ -12,9 +12,9 @@
 
   <!-- Barra de Acessibilidade -->
   <nav class="accessibility-nav" role="toolbar" aria-label="Ferramentas de acessibilidade">
-    <button class="acc-btn" onclick="changeFontSize(1)" aria-label="Aumentar fonte">A+</button>
-    <button class="acc-btn" onclick="changeFontSize(-1)" aria-label="Diminuir fonte">A-</button>
-    <button class="acc-btn" id="btn-tts" onclick="toggleReadAloud()" aria-label=" Ler Página">🔊</button>
+    <button id="btn-aumentar-fonte" class="acc-btn" aria-label="Aumentar fonte">A+</button>
+    <button id="btn-diminuir-fonte" class="acc-btn" aria-label="Diminuir fonte">A-</button>
+    <button id="btn-leitura" class="acc-btn" id="btn-tts" aria-label=" Ler Página">🔊</button>
   </nav>
 
   <!-- 1. INÍCIO (Banner) -->
@@ -121,7 +121,7 @@
     <p>A internet é para todos. Navegue com calma e segurança! 🛡️</p>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
