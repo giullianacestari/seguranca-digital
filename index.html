@@ -11,113 +11,127 @@
 <body>
 
   <!-- Barra de Acessibilidade -->
-
   <nav class="barra-acessibilidade">
     <!-- Botões de aumentar/diminuir baseados na sua sugestão -->
     <button class="botao-acesso" id="btn-aumentar-fonte">A+</button>
     <button class="botao-acesso" id="btn-diminuir-fonte">A-</button>
     <button class="botao-acesso" id="btn-leitura">🔊</button>
+  </nav>
 
+  <main>
+    <!-- 1. INÍCIO (Banner) -->
+    <header class="hero-banner">
+      <h1>Navegação Segura</h1>
+      <p>Proteja-se e navegue com confiança na internet.</p>
+      <a class="btn-help">
+        🆘 PRECISO DE AJUDA AGORA
+      </a>
+    </header>
 
-  <!-- 1. INÍCIO (Banner) -->
-  <header class="hero-banner">
-    <h1>Navegação Segura</h1>
-    <p>Proteja-se e navegue com confiança na internet.</p>
-    <a class="btn-help">
-      🆘 PRECISO DE AJUDA AGORA
-    </a>
-  </header>
+    <div class="container">
 
-  <div class="container">
-
-    <!-- Seção de Ajuda (Destino do botão do banner) -->
-    <div id="modal-fundo" class="modal-fundo">
-      <div id="ajuda-urgente" class="modal-content">
-        <h2 style="color: var(--danger-color); border-bottom-color: var(--danger-color);">🚨 O que fazer agora?</h2>
-        <p style="font-size: 1.3rem;">Se você acha que está em perigo digital:</p>
-        <ul style="font-size: 1.2rem;">
-          <li><b>Não transfira dinheiro</b> e não passe códigos de SMS.</li>
-          <li><b>Desligue a ligação</b> ou feche o aplicativo de conversa.</li>
-          <li><b>Chame alguém de confiança</b> (filho, neto ou amigo próximo).</li>
-          <li><b>Procure seu banco</b> através do número oficial no verso do cartão.</li>
-        </ul>
-        <button class="btn-close">Fechar</button>
+      <!-- Seção de Ajuda (Destino do botão do banner) -->
+      <div id="modal-fundo" class="modal-fundo">
+        <div id="ajuda-urgente" class="modal-content">
+          <h2 style="color: var(--danger-color); border-bottom-color: var(--danger-color);">🚨 O que fazer agora?</h2>
+          <p style="font-size: 1.3rem;">Se você acha que está em perigo digital:</p>
+          <ul style="font-size: 1.2rem;">
+            <li><b>Não transfira dinheiro</b> e não passe códigos de SMS.</li>
+            <li><b>Desligue a ligação</b> ou feche o aplicativo de conversa.</li>
+            <li><b>Chame alguém de confiança</b> (filho, neto ou amigo próximo).</li>
+            <li><b>Procure seu banco</b> através do número oficial no verso do cartão.</li>
+          </ul>
+          <button class="btn-close">Fechar</button>
+        </div>
       </div>
+
+      <!-- 2. DICAS IMPORTANTES -->
+      <section id="dicas">
+        <h2>📌 Dicas Importantes</h2>
+        <div class="tip-list">
+          <div class="tip-box">1. Senhas são secretas: não anote no celular nem conte para ninguém.</div>
+          <div class="tip-box">2. Desconfie de urgência: bancos nunca pedem ações imediatas por telefone.</div>
+          <div class="tip-box">3. Use o cadeado: verifique se há um cadeado ao lado do endereço do site.</div>
+        </div>
+      </section>
+
+      <!-- 3. DIREITOS NA INTERNET -->
+      <section id="direitos">
+        <h2>⚖️ Direitos na Internet</h2>
+        <div class="rights-content">
+          <p>No Brasil, você é protegido por leis importantes como o <b>Marco Civil da Internet</b> e a <b>Lei Geral de
+              Proteção de Dados (LGPD)</b>.</p>
+
+          <div class="rights-highlight">
+            <b>Esquecimento:</b> Você tem o direito de pedir que seus dados sejam apagados de um site ou aplicativo que
+            não usa mais.
+          </div>
+
+          <div class="rights-highlight">
+            <b>Liberdade:</b> Você pode expressar suas opiniões livremente, desde que não fira a honra de outras pessoas
+            ou espalhe mentiras.
+          </div>
+
+          <div class="rights-highlight">
+            <b>Arrependimento:</b> Em compras online, você tem até 7 dias para desistir e receber seu dinheiro de volta,
+            sem precisar explicar o motivo.
+          </div>
+
+          <div class="rights-highlight">
+            <b>Segurança:</b> Você tem o direito de navegar em sites que protejam seus dados financeiros e pessoais de
+            invasões.
+          </div>
+
+          <p>Essas leis garantem que a internet seja um espaço de respeito, onde o cidadão tem o controle sobre suas
+            próprias informações.</p>
+        </div>
+      </section>
+
+      <!-- 4. COMO SABER SE ESTOU CAINDO EM UM GOLPE? -->
+      <!-- Nova Seção: Checklist de Risco -->
+      <section id="termometro-risco">
+        <h2>🔍 Termômetro de Risco</h2>
+        <p>Marque os itens que você identificou na mensagem ou site suspeito:</p>
+
+        <label class="item-suspeito">
+          <input type="checkbox" class="check-risco">
+          A mensagem pede dinheiro ou dados pessoais com urgência.
+        </label>
+
+        <label class="item-suspeito">
+          <input type="checkbox" class="check-risco">
+          O remetente é um número desconhecido ou e-mail estranho.
+        </label>
+
+        <label class="item-suspeito">
+          <input type="checkbox" class="check-risco">
+          Existem erros de português ou palavras escritas de forma errada.
+        </label>
+
+        <label class="item-suspeito">
+          <input type="checkbox" class="check-risco">
+          Oferecem um prêmio ou vantagem que parece boa demais para ser verdade.
+        </label>
+
+        <label class="item-suspeito">
+          <input type="checkbox" class="check-risco">
+          Pede para você clicar em um link ou baixar um arquivo para "regularizar" algo.
+        </label>
+
+        <div id="resultado-risco"></div>
+      </section>
+
+      <section>
+        <h2>⚠️ Mensagens Estranhas</h2>
+        <p>Se receber um link urgente dizendo que você ganhou um prêmio, respire fundo e não clique. É quase sempre um
+          golpe.</p>
+      </section>
+
+
+
     </div>
 
-    <!-- 2. DICAS IMPORTANTES -->
-    <section id="dicas">
-      <h2>📌 Dicas Importantes</h2>
-      <div class="tip-list">
-        <div class="tip-box">1. Senhas são secretas: não anote no celular nem conte para ninguém.</div>
-        <div class="tip-box">2. Desconfie de urgência: bancos nunca pedem ações imediatas por telefone.</div>
-        <div class="tip-box">3. Use o cadeado: verifique se há um cadeado ao lado do endereço do site.</div>
-      </div>
-    </section>
-
-    <!-- 3. DIREITOS NA INTERNET -->
-    <section id="direitos">
-      <h2>⚖️ Direitos na Internet</h2>
-      <div class="rights-content">
-        <p>No Brasil, você é protegido por leis importantes como o <b>Marco Civil da Internet</b> e a <b>Lei Geral de
-            Proteção de Dados (LGPD)</b>.</p>
-
-        <div class="rights-highlight">
-          <b>Esquecimento:</b> Você tem o direito de pedir que seus dados sejam apagados de um site ou aplicativo que
-          não usa mais.
-        </div>
-
-        <div class="rights-highlight">
-          <b>Liberdade:</b> Você pode expressar suas opiniões livremente, desde que não fira a honra de outras pessoas
-          ou espalhe mentiras.
-        </div>
-
-        <div class="rights-highlight">
-          <b>Arrependimento:</b> Em compras online, você tem até 7 dias para desistir e receber seu dinheiro de volta,
-          sem precisar explicar o motivo.
-        </div>
-
-        <div class="rights-highlight">
-          <b>Segurança:</b> Você tem o direito de navegar em sites que protejam seus dados financeiros e pessoais de
-          invasões.
-        </div>
-
-        <p>Essas leis garantem que a internet seja um espaço de respeito, onde o cidadão tem o controle sobre suas
-          próprias informações.</p>
-      </div>
-    </section>
-
-    <!-- 4. COMO SABER SE ESTOU CAINDO EM UM GOLPE? -->
-    <section id="golpes">
-      <h2>🔍 Sinais de um Golpe</h2>
-      <p>Fique atento! Se encontrar algum destes sinais, pare e peça ajuda:</p>
-
-      <div class="alert-card">
-        <div class="alert-icon">⏳</div>
-        <div class="alert-text">
-          <b>Senso de Urgência:</b> Mensagens dizendo que "sua conta será bloqueada hoje" se você não clicar.
-        </div>
-      </div>
-
-      <div class="alert-card">
-        <div class="alert-icon">🎁</div>
-        <div class="alert-text">
-          <b>Prêmios e Sorteios:</b> Ganhou algo que não participou? É um convite falso para roubar dados.
-        </div>
-      </div>
-
-      <div class="alert-card">
-        <div class="alert-icon">📱</div>
-        <div class="alert-text">
-          <b>Pedido de Pix ou Código:</b> Parentes pedindo dinheiro por números novos? Ligue para o número antigo para
-          conferir.
-        </div>
-      </div>
-    </section>
-
-
-
-  </div>
+  </main>
 
   <footer>
     <p>A internet é para todos. Navegue com calma e segurança! 🛡️</p>

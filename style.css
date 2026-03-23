@@ -7,6 +7,7 @@
   --danger-color: #dc3545;
   --success-color: #28a745;
 
+
   --cor-primaria: #0056b3;
   --cor-fundo: #f8f9fa;
   --cor-texto: #212529;
@@ -15,6 +16,7 @@
   --cor-perigo: #dc3545;
   --cor-sucesso: #28a745;
   --altura-barra: 60px;
+
 }
 
 * {
@@ -73,6 +75,7 @@ body {
 .botao-acesso.ativo {
   background: var(--cor-sucesso);
 }
+
 
 /* 1. SEÇÃO INÍCIO (Banner) */
 .hero-banner {
@@ -250,6 +253,49 @@ h2 {
   font-size: 1.2rem;
 }
 
+
+/* Estilos do Checklist */
+.item-suspeito {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.item-suspeito input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#resultado-risco {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.risco-baixo {
+  background-color: var(--cor-sucesso);
+  color: white;
+}
+
+.risco-medio {
+  background-color: var(--cor-aviso);
+  color: black;
+}
+
+.risco-alto {
+  background-color: var(--cor-perigo);
+  color: white;
+}
 
 
 footer {

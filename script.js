@@ -15,7 +15,6 @@ function fecharModal() {
   janelaDeAjuda.style.display = "none";
 }
 
-
 // AUMENTAR/DIMINUIR FONTE
 
 let tamanhoFonteAtual = 16;
@@ -79,4 +78,53 @@ function iniciarLeitura() {
 // função chamada quando a leitura termina
 function finalizarLeitura() {
   lendo = false;
+}
+
+// pegar todos os checkboxes
+let checkboxes = document.querySelectorAll(".check-risco");
+
+// pegar a div de resultado
+let displayResultado = document.getElementById("resultado-risco");
+
+// adicionar evento em cada checkbox usando for
+for (let i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener("change", verificarRisco);
+}
+
+// função que verifica o risco
+function verificarRisco() {
+  let marcados = 0;
+
+  // contar quantos estão marcados
+  for (let i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked == true) {
+      marcados = marcados + 1;
+    }
+  }
+
+  displayResultado.style.display = "block";
+  displayResultado.className = "";
+
+  if (marcados == 0) {
+    displayResultado.style.display = "none";
+    return;
+  }
+
+  if (marcados >= 5) {
+    displayResultado.innerText =
+      "🚨 RISCO ALTO! Saia dessa página e não clique em nada.";
+    displayResultado.classList.add("risco-alto");
+    return;
+  }
+
+  if (marcados >= 3) {
+    displayResultado.innerText =
+      "⚠️ RISCO MÉDIO. Tenha muito cuidado e peça ajuda a uma pessoa de confiança.";
+    displayResultado.classList.add("risco-medio");
+    return;
+  }
+
+  // se não entrou em nenhum acima → é baixo
+  displayResultado.innerText = "✅ RISCO BAIXO. Mas continue sempre alerta!";
+  displayResultado.classList.add("risco-baixo");
 }
